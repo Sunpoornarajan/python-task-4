@@ -1,0 +1,21 @@
+#PROGRAM:
+def binary_search(arr, target):
+    left, right = 0, len(arr) - 1
+    while left <= right:
+        mid = (left + right) // 2
+        if arr[mid] == target:
+            return mid
+        elif arr[mid] < target:
+            left = mid + 1
+        else:
+            right = mid - 1
+    return -1
+arr = [2, 4, 10, 15, 20, 25, 30]
+target = 15
+print("Index of target:", binary_search(arr, target))
+target_not_found = 17
+print("Index of target (not found):", binary_search(arr, target_not_found))
+
+#OUTPUT:
+Index of target: 3
+Index of target (not found): -1
