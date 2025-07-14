@@ -1,0 +1,9 @@
+#PROGRAM:
+def longest_word(sentence):
+    words = sentence.split()
+    return max(words, key=len)
+sentence = "Python is an amazing programming language"
+print("Longest word:", longest_word(sentence))
+
+#OUTPUT:
+Longest word: programming
